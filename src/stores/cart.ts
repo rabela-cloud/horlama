@@ -50,7 +50,10 @@ export const useCartStore = create<CartStore>()(
         set({ isLoading: true });
         try {
           if (!cartId) {
-            const result = await createShopifyCart({ ...item, lineId: null });
+            const result = await createShopifyCart({
+              quantity: item.quantity,
+              variantId: item.variantId,
+            });
             if (result) {
               set({
                 cartId: result.cartId,
@@ -76,7 +79,10 @@ export const useCartStore = create<CartStore>()(
               clearCart();
             }
           } else {
-            const result = await addLineToShopifyCart(cartId, { ...item, lineId: null });
+            const result = await addLineToShopifyCart(cartId, {
+              quantity: item.quantity,
+              variantId: item.variantId,
+            });
             if (result.success) {
               const currentItems = get().items;
               set({ items: [...currentItems, { ...item, lineId: result.lineId ?? null }] });
