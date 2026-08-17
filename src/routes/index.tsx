@@ -27,6 +27,7 @@ import { getShopifyProducts } from "@/lib/shopify.functions";
 import { useCartStore, type CartItem } from "@/stores/cart";
 import { CartDrawer } from "@/components/cart-drawer";
 import type { ShopifyProduct } from "@/lib/shopify";
+import { ProductInfoSection } from "@/components/product-info";
 
 const productQueryOptions = {
   queryKey: ["shopify-products"],
@@ -128,6 +129,7 @@ function LandingContent() {
       <TrustSection />
       <BenefitsSection />
       <HowItWorksSection />
+      <ProductInfoSection />
       <ProductSection product={product} />
       <SocialSection />
       <FaqSection />
@@ -173,7 +175,7 @@ function HeroSection({ product }: { product: ShopifyProduct }) {
                 </a>
               </Button>
               <Button asChild variant="outline" size="lg" className="rounded-full px-8 text-base">
-                <a href="#wie-es-funktioniert">So funktioniert's</a>
+                <a href="#downloads">Patent &amp; Infos als PDF</a>
               </Button>
             </div>
             <ul className="grid gap-2 text-sm text-muted-foreground sm:grid-cols-2">
