@@ -18,9 +18,9 @@ export const Route = createFileRoute("/product/$handle")({
   head: ({ params }) => ({
     meta: [
       { title: `Produkt – ${params.handle}` },
-      { name: "description", content: "Schnarchschiene Pro – Details und Kauf" },
+      { name: "description", content: "Horlama Gaumentrainer – Details und Kauf" },
       { property: "og:title", content: `Produkt – ${params.handle}` },
-      { property: "og:description", content: "Schnarchschiene Pro – Details und Kauf" },
+      { property: "og:description", content: "Horlama Gaumentrainer – Details und Kauf" },
       { property: "og:type", content: "product" },
       { property: "og:url", content: `/product/${params.handle}` },
       { name: "twitter:card", content: "summary_large_image" },
