@@ -38,17 +38,17 @@ export const Route = createFileRoute("/")({
   component: LandingPage,
   head: () => ({
     meta: [
-      { title: "Schnarchschiene Pro – Patentierte Anti-Schnarch-Lösung" },
+      { title: "Horlama – Der Gaumentrainer gegen Schnarchen" },
       {
         name: "description",
         content:
-          "Die weltweit erste patentierte Schnarchschiene mit Jaw-Advancement-Technologie. Endlich ruhig schlafen – für dich und deinen Partner.",
+          "Horlama ist der patentierte Gaumentrainer gegen Schnarchen: 3 × 10 Minuten Training am Tag stärken Gaumen- und Rachenmuskulatur – natürlich, ohne Medikamente.",
       },
-      { property: "og:title", content: "Schnarchschiene Pro – Patentierte Anti-Schnarch-Lösung" },
+      { property: "og:title", content: "Horlama – Der Gaumentrainer gegen Schnarchen" },
       {
         property: "og:description",
         content:
-          "Die weltweit erste patentierte Schnarchschiene mit Jaw-Advancement-Technologie.",
+          "Der patentierte Gaumentrainer gegen Schnarchen – natürlich, ohne Medikamente, mit dauerhafter Wirkung.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
