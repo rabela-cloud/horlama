@@ -79,8 +79,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Horlama – Patentierte Schnarchschiene" },
-      { name: "description", content: "Die weltweit erste patentierte Schnarchschiene mit Jaw-Advancement-Technologie." },
+      { title: "Horlama – Der Gaumentrainer gegen Schnarchen" },
+      { name: "description", content: "Horlama ist der patentierte Gaumentrainer, der die Ursache des Schnarchens bekämpft: die erschlaffte Gaumen- und Rachenmuskulatur." },
       { name: "author", content: "Horlama" },
       { property: "og:site_name", content: "Horlama" },
       { property: "og:type", content: "website" },
