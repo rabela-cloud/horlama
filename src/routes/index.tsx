@@ -154,9 +154,9 @@ function HeroSection({ product }: { product: ShopifyProduct }) {
               Endlich wieder durchschlafen.
             </h1>
             <p className="text-lg leading-relaxed text-muted-foreground sm:text-xl">
-              Die <strong>Schnarchschiene Pro</strong> ist die weltweit erste Anti-Schnarch-Lösung
-              mit patentierter Jaw-Advancement-Technologie. Medizinisches Silikon, BPA-frei,
-              anpassbar an jeden Kiefer.
+              Der patentierte <strong>Gaumentrainer</strong> bekämpft die Ursache des primären
+              Schnarchens: die schwache Gaumenmuskulatur. Nur 3 × 10 Minuten Training am Tag –
+              nachts bleibt der Mund frei. Medizinischer Kunststoff (USP Class VI), Made in Germany.
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <span className="text-3xl font-bold text-foreground">
@@ -290,9 +290,9 @@ function BenefitsSection() {
 
 function HowItWorksSection() {
   const steps = [
-    { step: "01", title: "Anpassen", desc: "Die Schiene in heißem Wasser kurz erwärmen und am Gebiss formen." },
-    { step: "02", title: "Einsetzen", desc: "Vor dem Schlafengehen komfortabel einsetzen – sie hält den ganzen Abend." },
-    { step: "03", title: "Durchschlafen", desc: "Der Unterkiefer bleibt leicht vorgezogen, der Rachenraum bleibt offen." },
+    { step: "01", title: "Abspülen", desc: "Gaumentrainer aus der Box nehmen und unter fließendem Wasser abspülen – sofort einsatzbereit." },
+    { step: "02", title: "Trainieren", desc: "Tagsüber 3 × 10 Minuten am Gaumen tragen. Der Unterkiefer bleibt dabei beweglich." },
+    { step: "03", title: "Ruhiger schlafen", desc: "Die gestärkte Gaumenmuskulatur vibriert weniger – nachts bleibt der Mund frei." },
   ];
 
   return (
