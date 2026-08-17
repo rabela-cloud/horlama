@@ -40,7 +40,7 @@ function ProductPage() {
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <Link to="/" className="flex items-center gap-2 font-bold text-xl tracking-tight text-foreground">
             <Moon className="h-6 w-6 text-primary" />
-            <span>SleepSoundly</span>
+            <span>Horlama</span>
           </Link>
           <CartDrawer />
         </div>

@@ -78,7 +78,7 @@ function Header() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-2 font-bold text-xl tracking-tight text-foreground">
           <Moon className="h-6 w-6 text-primary" />
-          <span>SleepSoundly</span>
+          <span>Horlama</span>
         </Link>
         <div className="flex items-center gap-3">
           <CartDrawer />
@@ -527,10 +527,10 @@ function Footer() {
         <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
           <div className="flex items-center gap-2 font-bold text-lg text-card-foreground">
             <Moon className="h-5 w-5 text-primary" />
-            <span>SleepSoundly</span>
+            <span>Horlama</span>
           </div>
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} SleepSoundly. Patentierte Anti-Schnarch-Lösung.
+            © {new Date().getFullYear()} Horlama. Patentierte Anti-Schnarch-Lösung.
           </p>
           <div className="flex gap-4">
             <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
