@@ -239,23 +239,24 @@ function TrustSection() {
 function BenefitsSection() {
   const benefits = [
     {
-      title: "Patentierte Technologie",
+      title: "100 % natürlich",
       description:
-        "Unsere einzigartige Jaw-Advancement-Technologie hält den Unterkiefer sanft in der richtigen Position.",
+        "Keine Medikamente, keine Chemikalien, keine Nebenwirkungen. Reines Muskeltraining für nachhaltige Wirkung.",
     },
     {
-      title: "Sofortige Wirkung",
-      description: "Viele Nutzer berichten von deutlich weniger Schnarchen bereits ab der ersten Nacht.",
+      title: "Wissenschaftlich anerkannt",
+      description:
+        "Myofunktionelle Therapie ist in der Schlafmedizin als wirksame Methode gegen Schnarchen etabliert.",
     },
     {
-      title: "Maximaler Komfort",
+      title: "Einmalige Investition",
       description:
-        "Weiches, medizinisches Silikon passt sich deinem Gebiss an – ohne Druckstellen oder unangenehmen Geruch.",
+        "Einmal kaufen, dauerhaft profitieren. Keine monatlichen Kosten für Nasenstrips oder Sprays.",
     },
     {
-      title: "Hygienisch & Langlebig",
+      title: "Für alle geeignet",
       description:
-        "Inklusive durchdachter Aufbewahrungsbox. Einfach reinigen, trocknen, verstauen.",
+        "Schnarchen trifft Frauen und Männer jeden Alters. Horlama wirkt für alle ab 18 Jahren.",
     },
   ];
 
@@ -264,10 +265,10 @@ function BenefitsSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-16 text-center">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Warum Schnarchschiene Pro?
+            Warum Horlama?
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Entwickelt für besseren Schlaf – wissenschaftlich fundiert und praxiserprobt.
+            Ein Gaumentrainer, der die Ursache angeht – wissenschaftlich fundiert und praxiserprobt.
           </p>
         </div>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -290,19 +291,24 @@ function BenefitsSection() {
 
 function HowItWorksSection() {
   const steps = [
-    { step: "01", title: "Abspülen", desc: "Gaumentrainer aus der Box nehmen und unter fließendem Wasser abspülen – sofort einsatzbereit." },
-    { step: "02", title: "Trainieren", desc: "Tagsüber 3 × 10 Minuten am Gaumen tragen. Der Unterkiefer bleibt dabei beweglich." },
-    { step: "03", title: "Ruhiger schlafen", desc: "Die gestärkte Gaumenmuskulatur vibriert weniger – nachts bleibt der Mund frei." },
+    { step: "01", title: "Bestellen", desc: "Dein Horlama wird sicher und versandkostenfrei nach Hause geliefert – diskret verpackt." },
+    { step: "02", title: "Einsetzen", desc: "Den Trainer aus der Box nehmen, kurz abspülen und in den Mund einsetzen. Die ergonomische Form sitzt sofort bequem." },
+    { step: "03", title: "Täglich trainieren", desc: "Die Anwendung stärkt Zunge, Gaumen und Rachen – morgens, abends, überall und jederzeit." },
+    { step: "04", title: "Erholsam schlafen", desc: "Nach 3–4 Wochen berichten die meisten Nutzer von deutlich weniger Schnarchen und tieferem Schlaf." },
   ];
 
   return (
     <section id="wie-es-funktioniert" className="bg-secondary/30 py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-16 text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">So funktioniert's</h2>
-          <p className="mt-4 text-lg text-muted-foreground">In drei einfachen Schritten zu ruhigeren Nächten.</p>
+          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            In 4 Schritten zu ruhigen Nächten
+          </h2>
+          <p className="mt-4 text-lg text-muted-foreground">
+            Kein Arzt, kein Rezept, keine Technik. Nur wenige Minuten täglich.
+          </p>
         </div>
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((s) => (
             <div key={s.step} className="relative rounded-2xl bg-card p-8 shadow-sm">
               <span className="absolute -top-6 left-8 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-lg font-bold text-primary-foreground">
@@ -400,10 +406,6 @@ function ProductSection({ product }: { product: ShopifyProduct }) {
                     {selectedVariant?.price.currencyCode} {" "}
                     {parseFloat(selectedVariant?.price.amount || "0").toFixed(2)}
                   </span>
-                  <span className="text-lg text-muted-foreground line-through">
-                    {selectedVariant?.price.currencyCode} {" "}
-                    {selectedVariant?.title === "Einzeln" ? "69,00" : "119,00"}
-                  </span>
                 </div>
                 <p className="mt-2 text-sm text-muted-foreground">Inkl. MwSt. zzgl. Versand</p>
                 <Button
@@ -442,7 +444,7 @@ function SocialSection() {
               Folge uns auf TikTok & Instagram
             </h2>
             <p className="text-lg text-muted-foreground">
-              Sieh dir an, wie unsere Community mit der Schnarchschiene Pro endlich wieder durchschläft.
+              Sieh dir an, wie unsere Community mit Horlama endlich wieder durchschläft.
               Tipps, Hacks und echte Erfahrungsberichte – direkt auf deinem Feed.
             </p>
             <div className="flex flex-wrap gap-3">
@@ -482,20 +484,28 @@ function SocialSection() {
 function FaqSection() {
   const faqs = [
     {
-      q: "Wie schnell wirkt die Schnarchschiene Pro?",
-      a: "Viele Nutzer berichten von einer spürbaren Verbesserung bereits ab der ersten Nacht. Die volle Gewöhnung erfolgt in der Regel innerhalb von 3–7 Tagen.",
+      q: "Was genau ist der Horlama Gaumentrainer?",
+      a: "Horlama ist ein ergonomisch geformter Trainer, der in den Mund eingesetzt wird und gezielte myofunktionelle Übungen ermöglicht. Er trainiert die Muskeln in Zunge, Gaumen und Rachen – genau die Strukturen, die beim Schnarchen erschlaffen und vibrieren.",
     },
     {
-      q: "Ist die Schiene für jeden Kiefer geeignet?",
-      a: "Ja. Das medizinische Silikon wird in heißem Wasser weich und lässt sich individuell an dein Gebiss anpassen.",
+      q: "Wie lange dauert es bis zu ersten Ergebnissen?",
+      a: "Die meisten Nutzer berichten nach 2–4 Wochen regelmäßigen Trainings von ersten spürbaren Verbesserungen. Für optimale und dauerhafte Ergebnisse empfehlen wir eine konsequente Anwendung über mindestens 30–90 Tage.",
     },
     {
-      q: "Wie pflege ich die Schnarchschiene richtig?",
+      q: "Ist Horlama auch bei Schlafapnoe geeignet?",
+      a: "Myofunktionelle Übungen können bei leichter bis mittlerer obstruktiver Schlafapnoe unterstützend wirken. Bei diagnostizierter Schlafapnoe sollte Horlama ergänzend zur ärztlichen Therapie eingesetzt werden.",
+    },
+    {
+      q: "Wie oft und wie lange muss ich trainieren?",
+      a: "Wenige Minuten täglich reichen aus. Wir empfehlen die Anwendung morgens und/oder abends als Teil deiner bestehenden Routine – die Übungen sind einfach und intuitiv durchzuführen.",
+    },
+    {
+      q: "Für wen ist Horlama geeignet?",
+      a: "Horlama ist für Erwachsene ab 18 Jahren geeignet, die unter gewöhnlichem Schnarchen leiden. Es wirkt für Frauen und Männer gleichermaßen und unabhängig vom Alter.",
+    },
+    {
+      q: "Wie pflege ich den Gaumentrainer richtig?",
       a: "Nach jedem Gebrauch unter lauwarmem Wasser abspülen und in der mitgelieferten Box trocknen lassen. Gelegentlich mit einer milden Seife reinigen.",
-    },
-    {
-      q: "Gibt es eine Geld-zurück-Garantie?",
-      a: "Ja. Du hast 30 Tage Zeit, das Produkt zu testen. Wenn du nicht zufrieden bist, erstatten wir dir den Kaufpreis.",
     },
   ];
 
