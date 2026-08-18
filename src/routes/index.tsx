@@ -139,7 +139,7 @@ function LandingContent() {
 }
 
 function HeroSection({ product }: { product: ShopifyProduct }) {
-  const firstImage = product.node.images.edges[0]?.node.url;
+  const firstImage = heroImage.url;
   const firstVariant = product.node.variants.edges[0]?.node;
 
   return (
