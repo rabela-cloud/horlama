@@ -28,6 +28,7 @@ import { useCartStore, type CartItem } from "@/stores/cart";
 import { CartDrawer } from "@/components/cart-drawer";
 import type { ShopifyProduct } from "@/lib/shopify";
 import { ProductInfoSection } from "@/components/product-info";
+import heroImage from "@/assets/produkt-hero.jpg.asset.json";
 
 const productQueryOptions = {
   queryKey: ["shopify-products"],
