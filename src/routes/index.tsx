@@ -28,6 +28,7 @@ import { useCartStore, type CartItem } from "@/stores/cart";
 import { CartDrawer } from "@/components/cart-drawer";
 import type { ShopifyProduct } from "@/lib/shopify";
 import { ProductInfoSection } from "@/components/product-info";
+import heroImage from "@/assets/produkt-hero.jpg.asset.json";
 
 const productQueryOptions = {
   queryKey: ["shopify-products"],
@@ -139,7 +140,7 @@ function LandingContent() {
 }
 
 function HeroSection({ product }: { product: ShopifyProduct }) {
-  const firstImage = product.node.images.edges[0]?.node.url;
+  const firstImage = heroImage.url;
   const firstVariant = product.node.variants.edges[0]?.node;
 
   return (
