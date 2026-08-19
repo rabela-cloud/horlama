@@ -29,6 +29,8 @@ import { CartDrawer } from "@/components/cart-drawer";
 import type { ShopifyProduct } from "@/lib/shopify";
 import { ProductInfoSection } from "@/components/product-info";
 import heroImage from "@/assets/produkt-hero.jpg.asset.json";
+import anwendungImage from "@/assets/anwendung.jpg.asset.json";
+import boxImage from "@/assets/box.jpg.asset.json";
 
 const productQueryOptions = {
   queryKey: ["shopify-products"],
@@ -319,6 +321,27 @@ function HowItWorksSection() {
               <p className="text-muted-foreground">{s.desc}</p>
             </div>
           ))}
+        </div>
+        <div className="mt-16 grid gap-8 lg:grid-cols-2 lg:items-center">
+          <img
+            src={anwendungImage.url}
+            alt="Gebrauchsanleitung: vier Übungen mit dem Horlama Gaumentrainer"
+            loading="lazy"
+            className="w-full rounded-2xl bg-card shadow-sm"
+          />
+          <div className="space-y-4">
+            <h3 className="text-2xl font-semibold text-foreground">Die vier Übungen</h3>
+            <p className="text-muted-foreground">
+              Vier einfache Zungen- und Mundübungen aktivieren die Muskulatur rund um den Gaumen –
+              3 × 10 Minuten täglich genügen. Der Gaumentrainer kommt sauber in seine Box zurück.
+            </p>
+            <img
+              src={boxImage.url}
+              alt="Horlama Gaumentrainer in der mitgelieferten Aufbewahrungsbox"
+              loading="lazy"
+              className="w-full max-w-xs rounded-2xl bg-card shadow-sm"
+            />
+          </div>
         </div>
       </div>
     </section>

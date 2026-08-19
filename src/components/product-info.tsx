@@ -5,7 +5,8 @@ import { Download, FileText, FlaskConical, Sparkles, Droplets, Brain } from "luc
 import patentPdf from "@/assets/patent.pdf.asset.json";
 import produktinfoPdf from "@/assets/produktinfo.pdf.asset.json";
 import aufbauImage from "@/assets/aufbau.jpg.asset.json";
-import studieImage from "@/assets/studie.jpg.asset.json";
+import studieImage from "@/assets/studie-chart.png.asset.json";
+import anatomieImage from "@/assets/anatomie.png.asset.json";
 
 const features = [
   "Strafft das Gaumengewebe und reduziert Schnarchgeräusche",
@@ -46,6 +47,19 @@ export function ProductInfoSection() {
             Hamburg.
           </p>
         </div>
+
+        <div className="mx-auto max-w-3xl">
+          <img
+            src={anatomieImage.url}
+            alt="Anatomische Darstellung: Sitz des Gaumentrainers am harten Gaumen im Mundraum"
+            loading="lazy"
+            className="mx-auto w-full rounded-2xl bg-card p-4 shadow-sm"
+          />
+          <p className="mt-3 text-center text-sm text-muted-foreground">
+            Der Gaumentrainer stützt sich am harten Gaumen ab – der Unterkiefer bleibt frei beweglich.
+          </p>
+        </div>
+
 
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
           <div className="space-y-6">
