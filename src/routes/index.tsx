@@ -375,21 +375,7 @@ function ProductSection({ product }: { product: ShopifyProduct }) {
   return (
     <section id="produkt" className="py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
-          <div className="space-y-4">
-            {product.node.images.edges.map((img, idx) => (
-              <img
-                key={img.node.url}
-                src={img.node.url}
-                alt={img.node.altText || product.node.title}
-                width={800}
-                height={idx === 1 ? 500 : 800}
-                loading={idx === 0 ? "eager" : "lazy"}
-                className="w-full rounded-2xl bg-card shadow-sm"
-              />
-            ))}
-          </div>
-          <div className="lg:sticky lg:top-24">
+        <div className="mx-auto max-w-2xl">
             <Badge className="mb-4 bg-accent/80 text-accent-foreground hover:bg-accent/80">
               Nur noch wenige auf Lager
             </Badge>
