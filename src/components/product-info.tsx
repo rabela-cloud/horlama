@@ -1,9 +1,6 @@
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Download, FileText, FlaskConical, Sparkles, Droplets, Brain } from "lucide-react";
-import patentPdf from "@/assets/patent.pdf.asset.json";
-import produktinfoPdf from "@/assets/produktinfo.pdf.asset.json";
+import { FlaskConical, Sparkles, Droplets, Brain } from "lucide-react";
 import aufbauImage from "@/assets/aufbau.jpg.asset.json";
 import studieImage from "@/assets/studie-chart.png.asset.json";
 import anatomieImage from "@/assets/anatomie.png.asset.json";
@@ -162,34 +159,6 @@ export function ProductInfoSection() {
           </Card>
         </div>
 
-        <div id="downloads" className="rounded-3xl bg-card p-8 shadow-sm sm:p-12">
-          <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
-            <div className="space-y-3">
-              <Badge className="bg-accent/80 text-accent-foreground hover:bg-accent/80">
-                <FileText className="mr-1 h-3 w-3" /> Dokumentation
-              </Badge>
-              <h3 className="text-2xl font-bold text-card-foreground">
-                Patent &amp; Produktinformationen als PDF
-              </h3>
-              <p className="text-muted-foreground">
-                Alle Details zur patentierten Weltneuheit, zur klinischen Prüfung und zur Anwendung –
-                zum Herunterladen und in Ruhe nachlesen.
-              </p>
-            </div>
-            <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
-              <Button asChild size="lg" className="rounded-full">
-                <a href={patentPdf.url} download target="_blank" rel="noopener noreferrer">
-                  <Download className="mr-2 h-4 w-4" /> Patent-Dokumentation (PDF)
-                </a>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="rounded-full">
-                <a href={produktinfoPdf.url} download target="_blank" rel="noopener noreferrer">
-                  <Download className="mr-2 h-4 w-4" /> Produktinformation (PDF)
-                </a>
-              </Button>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

@@ -177,9 +177,6 @@ function HeroSection({ product }: { product: ShopifyProduct }) {
                   Jetzt bestellen <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
-              <Button asChild variant="outline" size="lg" className="rounded-full px-8 text-base">
-                <a href="#downloads">Patent &amp; Infos als PDF</a>
-              </Button>
             </div>
             <ul className="grid gap-2 text-sm text-muted-foreground sm:grid-cols-2">
               {["Kostenloser Versand", "30 Tage Geld-zurück", "Medizinischer Kunststoff", "Patentierte Technologie"].map(
