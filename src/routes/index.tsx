@@ -437,7 +437,6 @@ function ProductSection({ product }: { product: ShopifyProduct }) {
               </div>
             </div>
           </div>
-        </div>
       </div>
     </section>
   );
