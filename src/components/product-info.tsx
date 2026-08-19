@@ -5,7 +5,8 @@ import { Download, FileText, FlaskConical, Sparkles, Droplets, Brain } from "luc
 import patentPdf from "@/assets/patent.pdf.asset.json";
 import produktinfoPdf from "@/assets/produktinfo.pdf.asset.json";
 import aufbauImage from "@/assets/aufbau.jpg.asset.json";
-import studieImage from "@/assets/studie.jpg.asset.json";
+import studieImage from "@/assets/studie-chart.png.asset.json";
+import anatomieImage from "@/assets/anatomie.png.asset.json";
 
 const features = [
   "Strafft das Gaumengewebe und reduziert Schnarchgeräusche",
