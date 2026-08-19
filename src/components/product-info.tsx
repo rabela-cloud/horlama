@@ -48,6 +48,19 @@ export function ProductInfoSection() {
           </p>
         </div>
 
+        <div className="mx-auto max-w-3xl">
+          <img
+            src={anatomieImage.url}
+            alt="Anatomische Darstellung: Sitz des Gaumentrainers am harten Gaumen im Mundraum"
+            loading="lazy"
+            className="mx-auto w-full rounded-2xl bg-card p-4 shadow-sm"
+          />
+          <p className="mt-3 text-center text-sm text-muted-foreground">
+            Der Gaumentrainer stützt sich am harten Gaumen ab – der Unterkiefer bleibt frei beweglich.
+          </p>
+        </div>
+
+
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold text-foreground">Ergebnisse der Studie</h3>
