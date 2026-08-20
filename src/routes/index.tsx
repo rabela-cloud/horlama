@@ -373,7 +373,18 @@ function ProductSection({ product }: { product: ShopifyProduct }) {
   return (
     <section id="produkt" className="py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl">
+        <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
+          <div className="relative flex items-center justify-center">
+            <div className="absolute inset-0 rounded-full bg-primary/5 blur-3xl" />
+            <img
+              src={productImage.url}
+              alt={product.node.title}
+              width={600}
+              height={600}
+              className="relative z-10 w-full max-w-md rounded-3xl bg-card shadow-2xl"
+            />
+          </div>
+          <div>
             <Badge className="mb-4 bg-accent/80 text-accent-foreground hover:bg-accent/80">
               Nur noch wenige auf Lager
             </Badge>
@@ -435,6 +446,7 @@ function ProductSection({ product }: { product: ShopifyProduct }) {
               </div>
             </div>
           </div>
+        </div>
       </div>
     </section>
   );
