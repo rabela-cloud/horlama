@@ -85,8 +85,8 @@ function DatenschutzPage() {
             Diese Website verwendet Google Fonts zur einheitlichen Darstellung von Schriften. Beim
             Aufruf einer Seite lädt Ihr Browser die benötigten Fonts in seinen Browser-Cache.
             Hierbei wird Ihre IP-Adresse an Google übertragen. Rechtsgrundlage: Art. 6 Abs. 1 lit.
-                        f DSGVO. Weitere Informationen:{" "}
-            
+            f DSGVO. Weitere Informationen:{" "}
+            <a
               href="https://policies.google.com/privacy"
               target="_blank"
               rel="noopener noreferrer"
