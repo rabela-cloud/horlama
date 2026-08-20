@@ -28,7 +28,8 @@ import { useCartStore, type CartItem } from "@/stores/cart";
 import { CartDrawer } from "@/components/cart-drawer";
 import type { ShopifyProduct } from "@/lib/shopify";
 import { ProductInfoSection } from "@/components/product-info";
-import heroImage from "@/assets/produkt-hero.jpg.asset.json";
+import heroImage from "@/assets/produkt-hero-neu.png.asset.json";
+import productImage from "@/assets/produkt-hero.jpg.asset.json";
 import anwendungImage from "@/assets/anwendung.jpg.asset.json";
 import boxImage from "@/assets/box.jpg.asset.json";
 
