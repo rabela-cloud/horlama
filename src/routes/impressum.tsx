@@ -98,3 +98,8 @@ function ImpressumPage() {
             <br />
             Verfügbare Sprachen: Deutsch und Englisch
           </p>
+        </section>
+      </div>
+    </main>
+  );
+}
