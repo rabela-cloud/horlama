@@ -558,9 +558,16 @@ function Footer() {
             <Moon className="h-5 w-5 text-primary" />
             <span>Horlama</span>
           </div>
-          <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Horlama. Patentierte Anti-Schnarch-Lösung.
-          </p>
+                    <div className="flex flex-col items-center gap-2">
+            <p className="text-sm text-muted-foreground">
+              © {new Date().getFullYear()} Horlama. Patentierte Anti-Schnarch-Lösung.
+            </p>
+            <div className="flex gap-4 text-xs text-muted-foreground">
+              <Link to="/impressum" className="hover:text-primary">Impressum</Link>
+              <Link to="/datenschutz" className="hover:text-primary">Datenschutzerklärung</Link>
+              <Link to="/kontakt" className="hover:text-primary">Kontakt</Link>
+            </div>
+          </div>
           <div className="flex gap-4">
             <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
               <Music2 className="h-5 w-5 text-muted-foreground hover:text-primary" />
