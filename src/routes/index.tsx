@@ -28,10 +28,7 @@ import { useCartStore, type CartItem } from "@/stores/cart";
 import { CartDrawer } from "@/components/cart-drawer";
 import type { ShopifyProduct } from "@/lib/shopify";
 import { ProductInfoSection } from "@/components/product-info";
-import heroImage from "@/assets/produkt-hero-neu.png.asset.json";
-import productImage from "@/assets/produkt-hero.jpg.asset.json";
-import anwendungImage from "@/assets/anwendung.jpg.asset.json";
-import boxImage from "@/assets/box.jpg.asset.json";
+import { useSiteImages } from "@/hooks/use-site-images";
 
 const productQueryOptions = {
   queryKey: ["shopify-products"],
@@ -143,7 +140,8 @@ function LandingContent() {
 }
 
 function HeroSection({ product }: { product: ShopifyProduct }) {
-  const firstImage = heroImage.url;
+  const siteImage = useSiteImages();
+  const firstImage = siteImage("hero");
   const firstVariant = product.node.variants.edges[0]?.node;
 
   return (
@@ -322,7 +320,7 @@ function HowItWorksSection() {
         </div>
         <div className="mt-16 grid gap-8 lg:grid-cols-2 lg:items-center">
           <img
-            src={anwendungImage.url}
+            src={siteImage("anwendung")}
             alt="Gebrauchsanleitung: vier Übungen mit dem Horlama Gaumentrainer"
             loading="lazy"
             className="w-full rounded-2xl bg-card shadow-sm"
@@ -334,7 +332,7 @@ function HowItWorksSection() {
               3 × 10 Minuten täglich genügen. Der Gaumentrainer kommt sauber in seine Box zurück.
             </p>
             <img
-              src={boxImage.url}
+              src={siteImage("box")}
               alt="Horlama Gaumentrainer in der mitgelieferten Aufbewahrungsbox"
               loading="lazy"
               className="w-full max-w-xs rounded-2xl bg-card shadow-sm"
@@ -377,7 +375,7 @@ function ProductSection({ product }: { product: ShopifyProduct }) {
           <div className="relative flex items-center justify-center">
             <div className="absolute inset-0 rounded-full bg-primary/5 blur-3xl" />
             <img
-              src={productImage.url}
+              src={siteImage("produkt")}
               alt={product.node.title}
               width={600}
               height={600}
