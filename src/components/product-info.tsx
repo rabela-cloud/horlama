@@ -1,9 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { FlaskConical, Sparkles, Droplets, Brain } from "lucide-react";
-import anatomieImage from "@/assets/horlama-anatomie.png";
-import studieImage from "@/assets/horlama-studie-chart.png";
-import aufbauImage from "@/assets/gaumentrainer-aufbau.jpg";
+import { useSiteImages } from "@/hooks/use-site-images";
 
 const features = [
   "Strafft das Gaumengewebe und reduziert Schnarchgeräusche",
@@ -25,6 +23,7 @@ const parts = [
 ];
 
 export function ProductInfoSection() {
+  const siteImage = useSiteImages();
 
   return (
     <section id="wissenschaft" className="bg-secondary/30 py-24">
@@ -48,7 +47,7 @@ export function ProductInfoSection() {
 
         <div className="mx-auto max-w-3xl">
           <img
-            src={anatomieImage}
+            src={siteImage("anatomie")}
             alt="Anatomische Darstellung: Sitz des Gaumentrainers am harten Gaumen im Mundraum"
             loading="lazy"
             className="mx-auto w-full rounded-2xl bg-card p-4 shadow-sm"
@@ -69,9 +68,9 @@ export function ProductInfoSection() {
             </p>
             <div className="grid gap-4 sm:grid-cols-3">
               {[
-                { v: "−69 %", l: "Schnarchlautstärke nach 4 Wochen" },
+                { v: "Reduziert", l: "Schnarchlautstärke nach 4 Wochen laut Teilnehmerberichten" },
                 { v: "1,4", l: "Durchschnittliche Bewertung der Anwendung" },
-                { v: "100 %", l: "fühlten sich morgens ausgeruhter" },
+                { v: "Mehrheit", l: "berichtete, sich morgens ausgeruhter zu fühlen" },
               ].map((s) => (
                 <Card key={s.l} className="border-border bg-card">
                   <CardContent className="pt-6">
@@ -82,13 +81,13 @@ export function ProductInfoSection() {
               ))}
             </div>
             <p className="text-sm text-muted-foreground">
-              Zusätzlich wurde in einer Schlaflaborstudie am Bundeswehrkrankenhaus Hamburg der
-              AHI-Wert deutlich gesenkt sowie Sauerstoffsättigung und Herzfrequenz signifikant
-              verbessert.
+              In einer Schlaflaborstudie am Bundeswehrkrankenhaus Hamburg zeigten sich zudem
+              positive Tendenzen beim AHI-Wert, bei der Sauerstoffsättigung und der Herzfrequenz
+              (vorläufige Daten – Untersuchung nicht abgeschlossen).
             </p>
           </div>
           <img
-            src={studieImage}
+            src={siteImage("studie")}
             alt="Diagramm: Entwicklung der Schnarchintensität über die Wochen der Anwendung"
             loading="lazy"
             className="w-full rounded-2xl bg-card p-4 shadow-sm"
@@ -97,7 +96,7 @@ export function ProductInfoSection() {
 
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
           <img
-            src={aufbauImage}
+            src={siteImage("aufbau")}
             alt="Aufbau des Gaumentrainers mit Adaptationsspalt, Randwulst, Zahn-Biss-Platte, Oberseite und Korrekturkerbe"
             loading="lazy"
             className="w-full rounded-2xl bg-card shadow-sm"
@@ -140,9 +139,8 @@ export function ProductInfoSection() {
               </h3>
               <p className="text-sm leading-relaxed text-muted-foreground">
                 Die Übungen stimulieren fünf Hirnnerven, die für die Motorik in der Mundhöhle
-                zuständig sind. Eine oropharyngeale Stimulation kann sich positiv auf
-                Schluckstörungen und die Besserung der Hirnfunktion nach einem Schlaganfall
-                auswirken.
+                zuständig sind – die Grundlage für ein gezieltes Training von Zunge, Gaumen und
+                Rachenmuskulatur.
               </p>
             </CardContent>
           </Card>
