@@ -289,6 +289,7 @@ function BenefitsSection() {
 }
 
 function HowItWorksSection() {
+  const siteImage = useSiteImages();
   const steps = [
     { step: "01", title: "Bestellen", desc: "Dein Horlama wird sicher und versandkostenfrei nach Hause geliefert – diskret verpackt." },
     { step: "02", title: "Einsetzen", desc: "Den Trainer aus der Box nehmen, kurz abspülen und in den Mund einsetzen. Die ergonomische Form sitzt sofort bequem." },
@@ -345,6 +346,7 @@ function HowItWorksSection() {
 }
 
 function ProductSection({ product }: { product: ShopifyProduct }) {
+  const siteImage = useSiteImages();
   const [selectedVariantId, setSelectedVariantId] = useState<string>(
     product.node.variants.edges[0]?.node.id || "",
   );

@@ -23,6 +23,8 @@ const parts = [
 ];
 
 export function ProductInfoSection() {
+  const siteImage = useSiteImages();
+
   return (
     <section id="wissenschaft" className="bg-secondary/30 py-24">
       <div className="mx-auto max-w-7xl space-y-20 px-4 sm:px-6 lg:px-8">
