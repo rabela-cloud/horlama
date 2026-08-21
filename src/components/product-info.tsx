@@ -1,7 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { FlaskConical, Sparkles, Droplets, Brain } from "lucide-react";
-import { useSiteImages } from "@/hooks/use-site-images";
+import anatomieImage from "@/assets/horlama-anatomie.png";
+import studieImage from "@/assets/horlama-studie-chart.png";
+import aufbauImage from "@/assets/gaumentrainer-aufbau.jpg";
 
 const features = [
   "Strafft das Gaumengewebe und reduziert Schnarchgeräusche",
@@ -23,7 +25,6 @@ const parts = [
 ];
 
 export function ProductInfoSection() {
-  const siteImage = useSiteImages();
 
   return (
     <section id="wissenschaft" className="bg-secondary/30 py-24">
@@ -47,7 +48,7 @@ export function ProductInfoSection() {
 
         <div className="mx-auto max-w-3xl">
           <img
-            src={siteImage("anatomie")}
+            src={anatomieImage}
             alt="Anatomische Darstellung: Sitz des Gaumentrainers am harten Gaumen im Mundraum"
             loading="lazy"
             className="mx-auto w-full rounded-2xl bg-card p-4 shadow-sm"
@@ -87,7 +88,7 @@ export function ProductInfoSection() {
             </p>
           </div>
           <img
-            src={siteImage("studie")}
+            src={studieImage}
             alt="Diagramm: Entwicklung der Schnarchintensität über die Wochen der Anwendung"
             loading="lazy"
             className="w-full rounded-2xl bg-card p-4 shadow-sm"
@@ -96,7 +97,7 @@ export function ProductInfoSection() {
 
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
           <img
-            src={siteImage("aufbau")}
+            src={aufbauImage}
             alt="Aufbau des Gaumentrainers mit Adaptationsspalt, Randwulst, Zahn-Biss-Platte, Oberseite und Korrekturkerbe"
             loading="lazy"
             className="w-full rounded-2xl bg-card shadow-sm"
