@@ -1,22 +1,22 @@
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 
-import heroImage from "@/assets/produkt-hero-neu.png.asset.json";
-import productImage from "@/assets/produkt-hero.jpg.asset.json";
-import anwendungImage from "@/assets/anwendung.jpg.asset.json";
-import boxImage from "@/assets/box.jpg.asset.json";
-import aufbauImage from "@/assets/aufbau.jpg.asset.json";
-import studieImage from "@/assets/studie-chart.png.asset.json";
-import anatomieImage from "@/assets/anatomie.png.asset.json";
+import heroImage from "@/assets/produkt-hero-neu.png";
+import productImage from "@/assets/horlama-produkt.jpg";
+import anwendungImage from "@/assets/horlama-anwendung.jpg";
+import boxImage from "@/assets/horlama-box.jpg";
+import aufbauImage from "@/assets/gaumentrainer-aufbau.jpg";
+import studieImage from "@/assets/horlama-studie-chart.png";
+import anatomieImage from "@/assets/horlama-anatomie.png";
 
 export const IMAGE_SLOTS = [
-  { key: "hero", label: "Titelbild (Hero)", fallback: heroImage.url },
-  { key: "produkt", label: "Bild im Bestellbereich", fallback: productImage.url },
-  { key: "anwendung", label: "Anwendung / Übungsgrafik", fallback: anwendungImage.url },
-  { key: "box", label: "Aufbewahrungsbox", fallback: boxImage.url },
-  { key: "anatomie", label: "Anatomische Darstellung", fallback: anatomieImage.url },
-  { key: "studie", label: "Studien-Diagramm", fallback: studieImage.url },
-  { key: "aufbau", label: "Aufbau & Funktion", fallback: aufbauImage.url },
+  { key: "hero", label: "Titelbild (Hero)", fallback: heroImage },
+  { key: "produkt", label: "Bild im Bestellbereich", fallback: productImage },
+  { key: "anwendung", label: "Anwendung / Übungsgrafik", fallback: anwendungImage },
+  { key: "box", label: "Aufbewahrungsbox", fallback: boxImage },
+  { key: "anatomie", label: "Anatomische Darstellung", fallback: anatomieImage },
+  { key: "studie", label: "Studien-Diagramm", fallback: studieImage },
+  { key: "aufbau", label: "Aufbau & Funktion", fallback: aufbauImage },
 ] as const;
 
 export type ImageSlotKey = (typeof IMAGE_SLOTS)[number]["key"];
