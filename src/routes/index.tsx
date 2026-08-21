@@ -28,7 +28,10 @@ import { useCartStore, type CartItem } from "@/stores/cart";
 import { CartDrawer } from "@/components/cart-drawer";
 import type { ShopifyProduct } from "@/lib/shopify";
 import { ProductInfoSection } from "@/components/product-info";
-import { useSiteImages } from "@/hooks/use-site-images";
+import heroImage from "@/assets/produkt-hero-neu.png";
+import productImage from "@/assets/horlama-produkt.jpg";
+import anwendungImage from "@/assets/horlama-anwendung.jpg";
+import boxImage from "@/assets/horlama-box.jpg";
 
 const productQueryOptions = {
   queryKey: ["shopify-products"],
@@ -140,8 +143,7 @@ function LandingContent() {
 }
 
 function HeroSection({ product }: { product: ShopifyProduct }) {
-  const siteImage = useSiteImages();
-  const firstImage = siteImage("hero");
+  const firstImage = heroImage;
   const firstVariant = product.node.variants.edges[0]?.node;
 
   return (
@@ -289,7 +291,6 @@ function BenefitsSection() {
 }
 
 function HowItWorksSection() {
-  const siteImage = useSiteImages();
   const steps = [
     { step: "01", title: "Bestellen", desc: "Dein Horlama wird sicher und versandkostenfrei nach Hause geliefert – diskret verpackt." },
     { step: "02", title: "Einsetzen", desc: "Den Trainer aus der Box nehmen, kurz abspülen und in den Mund einsetzen. Die ergonomische Form sitzt sofort bequem." },
@@ -321,7 +322,7 @@ function HowItWorksSection() {
         </div>
         <div className="mt-16 grid gap-8 lg:grid-cols-2 lg:items-center">
           <img
-            src={siteImage("anwendung")}
+            src={anwendungImage}
             alt="Gebrauchsanleitung: vier Übungen mit dem Horlama Gaumentrainer"
             loading="lazy"
             className="w-full rounded-2xl bg-card shadow-sm"
@@ -333,7 +334,7 @@ function HowItWorksSection() {
               3 × 10 Minuten täglich genügen. Der Gaumentrainer kommt sauber in seine Box zurück.
             </p>
             <img
-              src={siteImage("box")}
+              src={boxImage}
               alt="Horlama Gaumentrainer in der mitgelieferten Aufbewahrungsbox"
               loading="lazy"
               className="w-full max-w-xs rounded-2xl bg-card shadow-sm"
@@ -346,7 +347,6 @@ function HowItWorksSection() {
 }
 
 function ProductSection({ product }: { product: ShopifyProduct }) {
-  const siteImage = useSiteImages();
   const [selectedVariantId, setSelectedVariantId] = useState<string>(
     product.node.variants.edges[0]?.node.id || "",
   );
@@ -377,7 +377,7 @@ function ProductSection({ product }: { product: ShopifyProduct }) {
           <div className="relative flex items-center justify-center">
             <div className="absolute inset-0 rounded-full bg-primary/5 blur-3xl" />
             <img
-              src={siteImage("produkt")}
+              src={productImage}
               alt={product.node.title}
               width={600}
               height={600}
